@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ookini - Reservar</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 400px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Reservar en Ookini</h1>
+  <label for="cantidad">¿Cuántas tazas quieres reservar?</label>
+  <input type="text" id="cantidad">
+  <button id="reservar">Reservar</button>
+
+  <script>
+  function puedeReservar(cantidad) {
+  return cantidad > 2;
+}
+
+
+    const input = document.querySelector("#cantidad");
+    const boton = document.querySelector("#reservar");
+
+    boton.addEventListener("click", function () {
+      const texto = input.value.trim();
+const cantidad = Number(texto);
+
+if (texto === "" || cantidad === 0) {
+  alert("Debes ingresar una cantidad mayor a 2 tazas");
+} else if (Number.isNaN(cantidad)) {
+  alert("Solo puedes agregar números aquí, tu reserva no fue aceptada");
+} else if (puedeReservar(cantidad)) {
+  alert("Reserva confirmada campeon");
+} else {
+  alert("Debes ingresar una cantidad mayor a 2 tazas");
+}
+    });
+  </script>
+</body>
+
+</html>

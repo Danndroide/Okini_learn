@@ -1,0 +1,25 @@
+body {
+    background-color: #8ecae6;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#219ebc;
+}
+h1 {
+    color: #023047;
+    font-size: 2.5 rem;
+}
+header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #1a1a1a;
+}
+nav a {
+    padding: 3rem 2 rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.metodo-titulo{
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+    color: #fb8500;
+}
